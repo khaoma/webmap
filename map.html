@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ENC221-0097/2018</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    #map {
+      height: 700px;
+      left:0;
+    }
+    .bar{
+      background-color: #555;
+      margin: 0;
+    }
+    .shead{
+      color:white;
+      text-align: center;
+      width: 100%;
+      
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <h1 class="shead"><b>AMENITIES IN JUJA</b></h1>
+  </div>
+  <div id="map"></div>
+
+  <script>
+    // Initialize the map
+    var map = L.map('map').setView([-1.1001626362647856, 37.01734134309756], 13);
+
+    // Add the tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(map);
+
+    // Add markers with custom popups
+    var marker1 = L.marker([-1.09,37.01]).addTo(map);
+    marker1.bindPopup("<div class='popup-content'><b>Education</b><br>JKUAT:A high level eduaction instituton").openPopup();
+    var marker2 = L.marker([-1.1033661189133286, 37.01758487813725]).addTo(map);
+    marker2.bindPopup("<b>Security</b><br>Juja police station").openPopup();
+    var marker3= L.marker([-1.1041293437570077, 37.013908254399134]).addTo(map);
+    marker3.bindPopup("<b>Retail</b><br>Juja Square:A shopping plaza with a wide range of shops").openPopup();
+    var marker4 = L.marker([-1.0857495635084462, 37.01994508986151]).addTo(map);
+    marker4.bindPopup("<b>Health</b><br>Gachororo health centre").openPopup();
+    var marker4 = L.marker([-1.0990419966888374, 37.01710662808451]).addTo(map);
+    marker4.bindPopup("<b>Religion</b><br>PCEA Juja Township").openPopup();
+    var marker4 = L.marker([-1.099975393358546, 37.01485668791424]).addTo(map);
+    marker4.bindPopup("<b>Finance and Banking</b><br>KCB JKUAT branch").openPopup();
+    var marker4 = L.marker([-1.1078720032768516, 37.01500934200276]).addTo(map);
+    marker4.bindPopup("<b>Transport</b><br>Juja Main stage").openPopup();
+    var marker4 = L.marker([-1.08985949326772, 37.007498860094884]).addTo(map);
+    marker4.bindPopup("<b>Park</b><br>SAJOREC botanical garden").openPopup();
+    var marker4 = L.marker([-1.1058715828939882, 37.015933939407184]).addTo(map);
+    marker4.bindPopup("<b>Accomodation</b><br>Senate hotel:offers bar,gym,restraunt and spar services").openPopup();
+
+  </script>
+</body>
+</html>
